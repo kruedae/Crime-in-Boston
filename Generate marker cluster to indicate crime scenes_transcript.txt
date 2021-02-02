@@ -1,0 +1,90 @@
+Welcome to this guided project on Python
+Geospatial Data Analysis. My name is Vinita and I will be your
+instructor for this project.
+I'm a certified data science instructor specializing in Python
+and R for machine learning as well as TensorFlow and Keras
+for deep learning.
+My latest book, titled Deep Learning Projects Using
+TensorFlow and Keras, was published by Apress New York.
+Together we will study crime data sourced from the Boston
+Police Department records.
+By the end of this project, you will learn how to manipulate
+geospatial data and create a dashboard like the one you see
+on the screen.
+Let's dive right in. Your notebook should open automatically
+on startup.
+You will notice that the first cell has already been filled
+in for you.
+This will import all the libraries and packages
+that you require for this project, just click the cell and hit
+run. You will notice that the second cell has been pre-filled
+for you as well.
+This will import the data that we are working with.
+Select that cell and hit run.
+Let's take a peek at our data.
+First we have the incident number column, then we have
+the offense code as well as the offense code group.
+After that, we have the offense description.
+This gives us a better idea of exactly what the crime was.
+After that, we have the district as well as the reporting
+area. Following this, we have the shooting column, which
+indicates if a shooting was involved or not, as well as the
+occurred on date, year,  month, day of the week, the hour
+UCR_part ,street, latitude, longitude, location, date
+and time.
+Let's begin by generating our base map.
+So we're going to type in the coordinates of Boston
+by creating the variable Boston and saying that's equal
+to open a bracket and type in 42 point 35 84 43
+comma minus seven.
+One point zero five.
+9, 77. After the bracket hit, enter. Now type in m.
+That's going to be the name of our map, is equal to Folium.
+dot map, with a capital m open a bracket and type
+in, location is equal to Boston comma  tile is equal
+to within single locations.
+We're going to use Stamen Terrain after that type in a coma,
+zoom underscore start is equal to. 
+Let's set it to 12.
+Finally, after the bracket hit, enter and type in m.
+Now hit run.
+You should have a map that looks similar to mine.
+Now let's create marker clusters to indicate where the crime
+scenes are.
+To do this, we're going to create the variable mc
+and say that is equal to Marker with a capital M and cluster
+with a capital.
+C. Open the bracket and after the bracket hit, enter to go
+to a new line.
+Then we'll use a for loop.
+So type in for, we'll use idx comma row, in df dot.
+itter rows, open a bracket after that enter a colon click.
+enter. Now use an if statement.
+if not math
+dot is nan open a bracket. row within a square bracket,
+and single quotations type in long, after the bracket
+and not math dot is nan open a bracket, row within a square
+bracket and single quotations.
+type in lat after the bracket, type in a colon hit, enter,
+then type in, type in mc.
+dot add.
+underscore child. Open a bracket type in marker with a capital
+M. Open
+another bracket as well as a square bracket.
+Then type in row.
+Open another square bracket within single quotations
+type in lat with a capital L after the square bracket
+comma row.
+within another square bracket as well as 
+a single quotations
+type in long with a capital L.
+After all of the brackets,
+hit enter. Then hit backspace until you get to the end
+of the line.
+Now type in M dot add underscore, child, open a bracket
+and type in mc. Hit run.
+When we study the map, we can see that the hot spots for
+most of these crimes our Southend Dorchester and Roxbury. I
+encourage you to explore the map as much as you like.
+In the next task, we will view the districts with the
+highest crime rates.
